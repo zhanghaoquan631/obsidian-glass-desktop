@@ -82,16 +82,17 @@
 - 当前公开包包含 1,593 条 Petdex 生物元数据和 8 个轻量 starter 精灵；完整素材缓存不随仓库发布，避免把约 3 GB 未逐项确认许可的社区素材直接打包。
 - 性能配置把同时活跃动物控制在 40 只以内，目录槽位控制在 80 个；低帧时优先减少背景活动，不影响 Dock、字幕或窗口预览。
 
-### 7. 底部环境光与 Ambient 状态层
+### 7. 底部环境光与 Dock 媒体状态层
 
 ![底部环境光与动态背景层](assets/screenshots/06-ambient.png)
 
-- 底部光带与动物脚下柔光位于 Lively 壁纸背景层，不建立可点击窗口，不遮挡 Dock、桌面组件或应用操作。
-- 环境光使用 Canvas 叠加混合与预生成径向光晕，避免为每个动物反复创建昂贵模糊层；强度可在 `0-100` 调整。
-- 颜色可以跟随当前动物或环境调色板，也可以固定为克制的银蓝色；鼠标移动时生成短暂能量尾迹，静止后自然羽化消失。
-- Dock 底部安全区、左侧 Stage Manager 和右侧组件区域带有软避让权重，动物与轨迹不会长期堆在交互控件后面。
-- Windows 媒体状态层独立读取播放会话，把进度线放在对应 Dock 应用下方；环境光和进度线彼此独立，关闭其中一项不会破坏 Dock。
-- 低帧保护会先降低尾迹、光晕和背景动物活动量；全屏电影或游戏时环境层留在壁纸后方，Dock 与边栏另外执行隐藏和降频。
+- 真正的底部环境光代码位于 `src/components/wallpaper/ambient-light/`。`bottom-ambient-light.css` 绘制蓝、紫、粉三组柔光池、双层光带和地平线，`bottom-ambient-light.js` 负责 Lively 属性、暂停、鼠标、音频和低功耗状态。
+- `src/components/wallpaper/index.html` 把环境光插在深空层与动物 Canvas 之间，因此它始终位于动物、Dock 和桌面组件后方，不创建可点击窗口，也不拦截桌面操作。
+- 连续动画只使用 CSS `transform` 与 `opacity`；JavaScript 不建立独立渲染循环，鼠标响应最多只保留一个待执行的 `requestAnimationFrame`，避免与流体、动物和组件争抢帧预算。
+- Lively 设置中可以开关环境光、把强度调到 `0-100`、选择蓝紫星云/青绿极光/暖金电影三种调色板，并分别开关鼠标和音乐响应。
+- 动物脚下柔光与鼠标动物轨迹仍由 `animal-trail/animal-trail.js` 的 Canvas 层负责，和底部环境光是两个可独立关闭的层。
+- Windows 媒体状态层位于 `src/components/ambient/`，独立读取播放会话并把进度线放在对应 Dock 应用下方；它与壁纸环境光互不依赖。
+- 上图来自当前实际运行桌面的安全裁切，能直接看到 Dock 后方的青蓝底部光晕；没有使用概念图冒充运行效果。
 
 ### 8. 顶栏媒体中心、开机编排与一键恢复
 
@@ -124,7 +125,8 @@
 | Dock | `src/components/dock/` | 当前三区 Dock、窗口跟踪、微信实时预览与运行黑点修复源码 |
 | 左侧栏 | `src/components/sidebar/` | 当前 Stage Manager 胶囊、DWM 缩略图、Seelen 横向预览 |
 | 顶栏 | `src/components/topbar/` | 当前媒体中心、录像时长、语言切换、X/GitHub/Claude 操作脚本 |
-| Ambient | `src/components/ambient/` | 当前 Dock 显隐和媒体进度组件 |
+| Dock 媒体与显隐 | `src/components/ambient/` | 当前 Dock 显隐和媒体进度组件 |
+| 底部环境光 | `src/components/wallpaper/ambient-light/` | 当前蓝紫环境光、鼠标/音频响应、暂停与低功耗适配 |
 | 壁纸 | `src/components/wallpaper/` | 当前深空环境、星座、流星、动物轨迹和 Petdex 元数据 |
 | 启动 | `src/current/` | 当前启动顺序的可移植版本及恢复脚本 |
 
@@ -205,6 +207,7 @@ powershell -ExecutionPolicy Bypass -File .\install-current-startup.ps1 -Apply
 
 - 太极流体与分层深空环境。
 - 十二星座轮换、星点漂移和流星通道。
+- Dock 后方的底部环境光、三种调色板、鼠标和音乐响应。
 - 动态动物轨迹系统：鼠标/触控板轨迹、闲置自主活动、群体行为、手势和低帧保护。
 - Petdex 当前 1,593 条生物元数据和 8 个轻量 starter 精灵图。
 

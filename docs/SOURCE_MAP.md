@@ -8,8 +8,9 @@ This table maps the **current** isolated public package to the active desktop wo
 | Left rail | `src/components/sidebar/` | `ObsidianSidebar.ps1`, `SeelenLivePreview.cs`, `start.ps1`, preview helpers | Optional Seelen UI, native Win32 |
 | Dashboard | `src/components/dashboard/` | `MacWidgetDashboard.ps1`, `Dashboard.xaml`, `SystemControlOverlay.ps1`, speech/media workers | WPF/.NET Framework, optional FFmpeg and isolated speech runtime |
 | Topbar | `src/components/topbar/` | `DesktopTopbar.cs`, `DesktopMediaCenter.ps1`, language/camera/X/GitHub helpers | Optional Seelen UI, MyDockFinder, FFmpeg |
-| Ambient | `src/components/ambient/` | `DockVisibilityController.ps1`, `DockMediaProgress.cs`, install/restore helpers | Windows media session APIs |
-| Wallpaper | `src/components/wallpaper/` | `index.html`, `space-environment/`, `animal-trail/`, `deploy/` | Lively Wallpaper/WebGL |
+| Dock media and visibility | `src/components/ambient/` | `DockVisibilityController.ps1`, `DockMediaProgress.cs`, install/restore helpers | Windows media session APIs |
+| Bottom ambient light | `src/components/wallpaper/ambient-light/` | `bottom-ambient-light.css`, `bottom-ambient-light.js`, `README.md` | Lively Wallpaper, CSS compositor |
+| Wallpaper | `src/components/wallpaper/` | `index.html`, `LivelyProperties.json`, `space-environment/`, `animal-trail/`, `ambient-light/` | Lively Wallpaper/WebGL |
 | Current startup | `src/current/`, root wrappers | `startup_optimized.ps1`, `start-current.ps1`, `install-current-startup.ps1` | Windows Task Scheduler, optional installed apps |
 | Generic startup kit | `src/` and `config/obsidian-glass.example.json` | `Install-StartupKit.ps1`, `Start-DesktopSession.ps1`, `Restore-StartupKit.ps1` | Windows Task Scheduler |
 

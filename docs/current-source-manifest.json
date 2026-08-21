@@ -2,9 +2,9 @@
     "schemaVersion":  1,
     "package":  "Obsidian Glass Desktop",
     "snapshotDate":  "2026-08-21",
-    "generatedAt":  "2026-08-20T17:23:21.0321366Z",
-    "fileCount":  238,
-    "totalBytes":  39861158,
+    "generatedAt":  "2026-08-21T03:42:23.4040207Z",
+    "fileCount":  241,
+    "totalBytes":  39768841,
     "excluded":  [
                      "runtime state",
                      "logs",
@@ -27,8 +27,8 @@
                   },
                   {
                       "path":  "CHANGELOG.md",
-                      "bytes":  2464,
-                      "sha256":  "479770a39f8ddfe981b962117cae81972182c464dcfbb34cd456396b22421f5b"
+                      "bytes":  3147,
+                      "sha256":  "297f66c4453696d2eab5c53c88e14093c88759a2fede8ef2f58f657e8e6d45f9"
                   },
                   {
                       "path":  "install-current-startup.ps1",
@@ -47,8 +47,8 @@
                   },
                   {
                       "path":  "README.md",
-                      "bytes":  7012,
-                      "sha256":  "cab70a8747c31c063c511bbdbcdc178864625a55d19bfb108d230dd2763f147b"
+                      "bytes":  17372,
+                      "sha256":  "9cedbf6dc54ed23b1b2af45f126ee5b902bf5e23f2adcfaa2a64ed09efd54cd5"
                   },
                   {
                       "path":  "restore-current-startup.ps1",
@@ -82,8 +82,8 @@
                   },
                   {
                       "path":  "test.ps1",
-                      "bytes":  314,
-                      "sha256":  "0b00dce30795f364a12523a6e7a5480c49758fabb63e751fb2be5fff3cb9d288"
+                      "bytes":  4569,
+                      "sha256":  "f7629e933d74cc8e13725e117b620f2826d75e27b331a8dacfe483347cd4a2c4"
                   },
                   {
                       "path":  "assets/manifest.json",
@@ -97,8 +97,8 @@
                   },
                   {
                       "path":  "assets/screenshots/01-overview.png",
-                      "bytes":  654753,
-                      "sha256":  "fdd276788bcd99d7e40cb5287a3545a036330cb3815d997525669afef809a68e"
+                      "bytes":  843800,
+                      "sha256":  "6583564c86d549b73e436461be759c6568e3750ef56f640e7293e37a42a05a69"
                   },
                   {
                       "path":  "assets/screenshots/02-dock.png",
@@ -112,8 +112,8 @@
                   },
                   {
                       "path":  "assets/screenshots/04-dashboard.png",
-                      "bytes":  469568,
-                      "sha256":  "33ef12df102dc4007b71fe28dca17065b65325a72504b4965ee379cc8a9a7e0c"
+                      "bytes":  718559,
+                      "sha256":  "dce2ed473e7bc4de18a96328c37234249906c7796c3217bf1702d7ce0e3232ae"
                   },
                   {
                       "path":  "assets/screenshots/05-topbar.png",
@@ -122,8 +122,8 @@
                   },
                   {
                       "path":  "assets/screenshots/06-ambient.png",
-                      "bytes":  878921,
-                      "sha256":  "22c615d147f23acbb893d737a2c23f6c838bcd38d1ba8e95c4af0cf00493dc8f"
+                      "bytes":  317835,
+                      "sha256":  "6cc83c67aca3159f1e3ba4ef3a7639a2c50a70f4ed9022ffb7571ea1a9a6ef56"
                   },
                   {
                       "path":  "assets/screenshots/07-wallpaper.png",
@@ -162,8 +162,8 @@
                   },
                   {
                       "path":  "docs/CURRENT_SNAPSHOT.md",
-                      "bytes":  2580,
-                      "sha256":  "c53522d6866e815b3250a565b1997425c7650e026b45b59a8c8ead904dcf2e9f"
+                      "bytes":  2937,
+                      "sha256":  "fceb3a37ed6819f1d364684399230f6f9672d2e7df2052b946693e9693a11b49"
                   },
                   {
                       "path":  "docs/PUBLISH_CHECKLIST.md",
@@ -172,13 +172,13 @@
                   },
                   {
                       "path":  "docs/SCREENSHOT_CATALOG.md",
-                      "bytes":  1718,
-                      "sha256":  "42971c44423f50d614824a0c5a4f431cda6cd52634a3d6c8b0e7eeaba9fd8ffb"
+                      "bytes":  2005,
+                      "sha256":  "ac26fccadd6c630d1b093fc92632796f8055d736fa56bd496cb854383963e3b0"
                   },
                   {
                       "path":  "docs/SOURCE_MAP.md",
-                      "bytes":  1923,
-                      "sha256":  "03af775df0eb7f48f3194d39dc7607403473b92c546cb7712684f81d087cfbe3"
+                      "bytes":  2146,
+                      "sha256":  "1817680eed6be7efad25ec0efd0cc9086b285213d8437ef29bcff22935ddab14"
                   },
                   {
                       "path":  "docs/STARTUP_DESIGN.md",
@@ -947,8 +947,8 @@
                   },
                   {
                       "path":  "src/components/wallpaper/index.html",
-                      "bytes":  4342,
-                      "sha256":  "da3d2b99ce7c3c4909416a603ba93d20b3ba4f94d4f87d43409eaf47b93f7da5"
+                      "bytes":  4900,
+                      "sha256":  "00dda15307134902e24d3c156b5c0cb96e3e23fdf1a2074bca3b3ebafe7db325"
                   },
                   {
                       "path":  "src/components/wallpaper/LDR_LLL1_0.png",
@@ -967,8 +967,8 @@
                   },
                   {
                       "path":  "src/components/wallpaper/LivelyProperties.json",
-                      "bytes":  17226,
-                      "sha256":  "b3754af037387547502ebef6e4ce7a3166974517e6b6be782a15bf107c95f993"
+                      "bytes":  19139,
+                      "sha256":  "320e05cdd348c7a530f7bb3ad109c5708a932494441bdc38b0afb62a9b5f4c51"
                   },
                   {
                       "path":  "src/components/wallpaper/logo.png",
@@ -982,13 +982,28 @@
                   },
                   {
                       "path":  "src/components/wallpaper/README.md",
-                      "bytes":  552,
-                      "sha256":  "9e5fb145d58a82cc67ba3e20ebf7e18fab24f45bd111c7c947c34fda96f8c04e"
+                      "bytes":  2065,
+                      "sha256":  "330e950554e164dcd78d4e4ac072a070036a87c3d0f5f5d25ea9bc98c39bd762"
                   },
                   {
                       "path":  "src/components/wallpaper/thumbnail.jpg",
                       "bytes":  24622,
                       "sha256":  "66ffa477b50d25e745581953518667cb889ccd7b452c194066945dbb6937e7e4"
+                  },
+                  {
+                      "path":  "src/components/wallpaper/ambient-light/bottom-ambient-light.css",
+                      "bytes":  4313,
+                      "sha256":  "1aabcea65b376eb93f56cf9f5601c2325da9466695dcd3a9cca6b247627a9d17"
+                  },
+                  {
+                      "path":  "src/components/wallpaper/ambient-light/bottom-ambient-light.js",
+                      "bytes":  4703,
+                      "sha256":  "fe8dc8931e69953c55c0f300a1d6156e1f353a8c032bd04e41a9fb8aad0dfe33"
+                  },
+                  {
+                      "path":  "src/components/wallpaper/ambient-light/README.md",
+                      "bytes":  800,
+                      "sha256":  "7d4ad72c3996eb9326140262ba5878f63b42f35165c35a07ec329b8728c6544f"
                   },
                   {
                       "path":  "src/components/wallpaper/animal-trail/animal-trail.js",
@@ -1107,8 +1122,8 @@
                   },
                   {
                       "path":  "src/components/wallpaper/js/script.js",
-                      "bytes":  57302,
-                      "sha256":  "83dc4bc2ce1d5d2cd735acc52c50433444145808c9488d29e4ec84ea4519ad1d"
+                      "bytes":  57577,
+                      "sha256":  "699922dc868d221a53c93f402d73a0f1e6f9e2fb22f3b645e79db1a9aa8edc6c"
                   },
                   {
                       "path":  "src/components/wallpaper/lively_theme/background.jpg",
@@ -1197,8 +1212,8 @@
                   },
                   {
                       "path":  "tools/New-DesktopPreview.ps1",
-                      "bytes":  1476,
-                      "sha256":  "522fdfc54b19bc485c8df8c97c41d521652eb285f3abdd463483d93a060836cb"
+                      "bytes":  1967,
+                      "sha256":  "45939f75b90864f6e038dc8a3031001088cef6679ea1430a032ef8abd100b512"
                   },
                   {
                       "path":  "tools/Sync-AnimalTrailAssets.ps1",

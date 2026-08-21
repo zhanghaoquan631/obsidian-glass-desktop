@@ -1,0 +1,129 @@
+#bottom-ambient-light {
+  --bottom-ambient-primary: 112, 190, 255;
+  --bottom-ambient-secondary: 158, 115, 255;
+  --bottom-ambient-accent: 255, 120, 198;
+  --bottom-ambient-focus-x: 50%;
+  --bottom-ambient-shift: 0px;
+  --bottom-ambient-audio-scale: 1;
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: min(28vh, 360px);
+  overflow: hidden;
+  contain: strict;
+  pointer-events: none;
+  user-select: none;
+  isolation: isolate;
+  transform: translateZ(0);
+  transition: opacity 360ms ease;
+}
+
+#bottom-ambient-light[hidden] {
+  display: none;
+}
+
+.bottom-ambient__wash,
+.bottom-ambient__focus,
+.bottom-ambient__ribbon,
+.bottom-ambient__horizon {
+  position: absolute;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+.bottom-ambient__wash {
+  right: -5%;
+  bottom: -44%;
+  left: -5%;
+  height: 150%;
+  background:
+    radial-gradient(ellipse 42% 86% at var(--bottom-ambient-focus-x) 96%, rgba(var(--bottom-ambient-primary), .48) 0%, rgba(var(--bottom-ambient-primary), .18) 35%, transparent 72%),
+    radial-gradient(ellipse 38% 80% at 24% 108%, rgba(var(--bottom-ambient-secondary), .30) 0%, rgba(var(--bottom-ambient-secondary), .10) 38%, transparent 72%),
+    radial-gradient(ellipse 34% 76% at 78% 110%, rgba(var(--bottom-ambient-accent), .25) 0%, rgba(var(--bottom-ambient-accent), .08) 40%, transparent 74%);
+  filter: blur(22px) saturate(1.08);
+  mix-blend-mode: screen;
+  transform: translate3d(var(--bottom-ambient-shift), 0, 0) scale3d(1.04, var(--bottom-ambient-audio-scale), 1);
+  transform-origin: 50% 100%;
+  transition: transform 260ms cubic-bezier(.2, .72, .28, 1);
+}
+
+.bottom-ambient__focus {
+  right: 14%;
+  bottom: -32%;
+  left: 14%;
+  height: 92%;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at 50% 100%, rgba(235, 248, 255, .18) 0%, rgba(var(--bottom-ambient-primary), .14) 25%, transparent 68%);
+  filter: blur(14px);
+  mix-blend-mode: screen;
+  animation: bottom-ambient-breathe 7.6s ease-in-out infinite alternate;
+}
+
+.bottom-ambient__ribbon {
+  bottom: 4.5%;
+  left: 50%;
+  width: 58%;
+  height: 2px;
+  border-radius: 999px;
+  opacity: .58;
+  filter: blur(.35px) drop-shadow(0 0 8px rgba(var(--bottom-ambient-primary), .65));
+  transform-origin: 50% 50%;
+}
+
+.bottom-ambient__ribbon--primary {
+  background: linear-gradient(90deg, transparent 0%, rgba(var(--bottom-ambient-secondary), .32) 18%, rgba(239, 249, 255, .82) 50%, rgba(var(--bottom-ambient-primary), .42) 82%, transparent 100%);
+  animation: bottom-ambient-ribbon-a 10.5s ease-in-out infinite alternate;
+}
+
+.bottom-ambient__ribbon--secondary {
+  bottom: 9%;
+  width: 42%;
+  background: linear-gradient(90deg, transparent 0%, rgba(var(--bottom-ambient-accent), .28) 22%, rgba(var(--bottom-ambient-secondary), .58) 52%, rgba(var(--bottom-ambient-primary), .24) 78%, transparent 100%);
+  opacity: .36;
+  animation: bottom-ambient-ribbon-b 13s ease-in-out infinite alternate;
+}
+
+.bottom-ambient__horizon {
+  right: 21%;
+  bottom: 1px;
+  left: 21%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(var(--bottom-ambient-secondary), .38), rgba(240, 249, 255, .72), rgba(var(--bottom-ambient-primary), .38), transparent);
+  box-shadow: 0 -2px 16px rgba(var(--bottom-ambient-primary), .28);
+  opacity: .64;
+}
+
+#bottom-ambient-light.is-paused .bottom-ambient__focus,
+#bottom-ambient-light.is-paused .bottom-ambient__ribbon,
+#bottom-ambient-light.is-low-power .bottom-ambient__focus,
+#bottom-ambient-light.is-low-power .bottom-ambient__ribbon {
+  animation-play-state: paused;
+}
+
+#bottom-ambient-light.is-low-power .bottom-ambient__ribbon--secondary {
+  display: none;
+}
+
+@keyframes bottom-ambient-breathe {
+  from { opacity: .54; transform: translate3d(-1.4%, 2%, 0) scale3d(.96, .88, 1); }
+  to { opacity: .86; transform: translate3d(1.4%, -2%, 0) scale3d(1.04, 1.08, 1); }
+}
+
+@keyframes bottom-ambient-ribbon-a {
+  from { transform: translate3d(-52%, 0, 0) scaleX(.86); opacity: .34; }
+  to { transform: translate3d(-48%, -5px, 0) scaleX(1.06); opacity: .66; }
+}
+
+@keyframes bottom-ambient-ribbon-b {
+  from { transform: translate3d(-46%, 2px, 0) scaleX(1.08); }
+  to { transform: translate3d(-54%, -3px, 0) scaleX(.88); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bottom-ambient__focus,
+  .bottom-ambient__ribbon {
+    animation: none !important;
+  }
+}

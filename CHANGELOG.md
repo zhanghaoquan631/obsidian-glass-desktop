@@ -1,5 +1,12 @@
 ﻿# Changelog
 
+## 0.2.1 - 2026-08-21
+
+- Added the real bottom ambient-light implementation under `src/components/wallpaper/ambient-light/` and connected it to the current Lively wallpaper entry point, audio callback, pause state, property listener, and low-power settings.
+- Replaced the outdated dashboard and ambient documentation images with privacy-safe crops of the actual current movable widgets and the live bottom light behind the Dock.
+- Corrected the README and source map so the wallpaper ambient light is no longer confused with the separate Dock media/visibility controller.
+- Added integration and screenshot checks to the package test and made the desktop capture helper DPI-aware.
+
 ## 0.2.0 - 2026-08-21
 
 - Published a current-workspace snapshot as the successor branch `codex/current-desktop-20260821`.

@@ -1,4 +1,4 @@
-﻿/*
+/*
 MIT License
 
 Copyright (c) 2017 Pavel Dobryakov
@@ -88,6 +88,7 @@ function livelyWallpaperPlaybackChanged(data) {
   _isSleep = obj.IsPaused;
   if (window.AnimalTrailSystem) window.AnimalTrailSystem.setPaused(_isSleep);
   if (window.SpaceEnvironmentSystem) window.SpaceEnvironmentSystem.setPaused(_isSleep);
+  if (window.BottomAmbientLightSystem) window.BottomAmbientLightSystem.setPaused(_isSleep);
 }
 
 let timeout;
@@ -100,6 +101,7 @@ let lastPointerActivityAt = performance.now();
 let lastRenderedAt = 0;
 function livelyAudioListener(audioArray) {
   const now = performance.now();
+  if (window.BottomAmbientLightSystem) window.BottomAmbientLightSystem.onAudio(audioArray);
   if (!audioArray || !audioArray.length) return;
   if (audioArray[0] === 0 || _isSleep == true) {
     _runRandom = true;
@@ -250,6 +252,7 @@ let _audioReact = false;
 function livelyPropertyListener(name, val) {
   if (window.AnimalTrailSystem) window.AnimalTrailSystem.onProperty(name, val);
   if (window.SpaceEnvironmentSystem) window.SpaceEnvironmentSystem.onProperty(name, val);
+  if (window.BottomAmbientLightSystem) window.BottomAmbientLightSystem.onProperty(name, val);
   switch (name) {
     case "quality":
       config.DYE_RESOLUTION = [1024, 512, 256, 128][val];

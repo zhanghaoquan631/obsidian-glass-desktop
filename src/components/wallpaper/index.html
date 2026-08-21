@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -12,6 +12,7 @@
         <link rel="apple-touch-icon" href="logo.png">
         <link rel="icon" href="logo.png">
         <link rel="stylesheet" href="space-environment/space-environment.css">
+        <link rel="stylesheet" href="ambient-light/bottom-ambient-light.css">
 
         <title>WebGL Fluid Simulation</title>
         <meta name="description" content="A WebGL fluid simulation that works in mobile browsers.">
@@ -129,6 +130,13 @@
             <div class="space-meteor-layer"></div>
             <div class="space-hero-layer"></div>
         </div>
+        <div id="bottom-ambient-light" aria-hidden="true">
+            <div class="bottom-ambient__wash"></div>
+            <div class="bottom-ambient__focus"></div>
+            <div class="bottom-ambient__ribbon bottom-ambient__ribbon--primary"></div>
+            <div class="bottom-ambient__ribbon bottom-ambient__ribbon--secondary"></div>
+            <div class="bottom-ambient__horizon"></div>
+        </div>
         <canvas id="animal-trail-canvas" aria-hidden="true"></canvas>
         <script>
             // Lively renders this page in a hidden WebView. Its explicit
@@ -137,6 +145,7 @@
         </script>
         <script src="space-environment/space-config.js"></script>
         <script src="space-environment/space-environment.js"></script>
+        <script src="ambient-light/bottom-ambient-light.js"></script>
         <script src="animal-trail/catalog/creatures.js"></script>
         <script src="animal-trail/animal-trail.js"></script>
         <script src="js/script.js"></script>

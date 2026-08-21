@@ -1,4 +1,4 @@
-﻿{
+{
     "audioReact":  {
                        "type":  "checkbox",
                        "value":  true,
@@ -392,6 +392,44 @@
                                 "type":  "checkbox",
                                 "value":  false,
                                 "text":  "夜间低功耗"
+                            },
+    "bottomAmbientEnabled":  {
+                                  "type":  "checkbox",
+                                  "value":  true,
+                                  "text":  "底部环境光"
+                              },
+    "bottomAmbientIntensity":  {
+                                    "max":  100,
+                                    "min":  0,
+                                    "tick":  101,
+                                    "text":  "底部环境光强度",
+                                    "type":  "slider",
+                                    "value":  72
+                                },
+    "bottomAmbientPalette":  {
+                                  "type":  "dropdown",
+                                  "value":  0,
+                                  "text":  "底部环境光色彩",
+                                  "items":  [
+                                                "蓝紫星云",
+                                                "极光青绿",
+                                                "电影暖金"
+                                            ]
+                              },
+    "bottomAmbientPointerReactive":  {
+                                          "type":  "checkbox",
+                                          "value":  true,
+                                          "text":  "环境光跟随鼠标"
+                                      },
+    "bottomAmbientAudioReactive":  {
+                                        "type":  "checkbox",
+                                        "value":  true,
+                                        "text":  "环境光跟随音乐"
+                                    },
+    "bottomAmbientReset":  {
+                                "text":  "恢复底部环境光默认设置",
+                                "type":  "button",
+                                "value":  "reset"
                             },
     "animalTrailClear":  {
                              "text":  "一键清除当前动物",

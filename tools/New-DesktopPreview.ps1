@@ -14,6 +14,26 @@ if ([string]::IsNullOrWhiteSpace($OutputDirectory)) {
     $OutputDirectory = Join-Path $packageRoot 'assets\screenshots'
 }
 
+if ($null -eq ('ObsidianGlassNativeDpi' -as [type])) {
+    Add-Type -TypeDefinition @'
+using System;
+using System.Runtime.InteropServices;
+
+public static class ObsidianGlassNativeDpi
+{
+    [DllImport("user32.dll")]
+    public static extern bool SetProcessDpiAwarenessContext(IntPtr value);
+}
+'@
+}
+
+try {
+    [ObsidianGlassNativeDpi]::SetProcessDpiAwarenessContext([IntPtr](-4)) | Out-Null
+}
+catch {
+    Write-Verbose 'Per-monitor DPI awareness is unavailable; using the process default.'
+}
+
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
