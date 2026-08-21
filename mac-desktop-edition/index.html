@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <title>Mac Desktop Edition</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="desktop-shell" aria-label="Mac 风格桌面原型">
+      <div class="wallpaper" aria-hidden="true"></div>
+      <div class="wallpaper-shade" aria-hidden="true"></div>
+
+      <header class="menu-bar">
+        <div class="menu-start">
+          <button class="menu-orb icon-button" type="button" data-panel="launcher" aria-label="打开应用启动器" data-tooltip="应用启动器">✦</button>
+          <button class="menu-app is-active" type="button" data-panel="app-menu">Obsidian Desk</button>
+          <nav class="app-menu-links" aria-label="应用菜单">
+            <button type="button" data-panel="file-menu">文件</button>
+            <button type="button" data-panel="edit-menu">编辑</button>
+            <button type="button" data-panel="view-menu">显示</button>
+            <button type="button" data-panel="window-menu">窗口</button>
+            <button type="button" data-panel="help-menu">帮助</button>
+          </nav>
+        </div>
+        <div class="menu-end">
+          <button class="status-control icon-button" type="button" data-panel="now-playing" aria-label="正在播放" data-tooltip="正在播放">♫</button>
+          <button class="status-control icon-button" type="button" data-panel="wifi" aria-label="无线网络" data-tooltip="无线网络">⌁</button>
+          <button class="status-control icon-button" type="button" data-panel="battery" aria-label="电池" data-tooltip="电池">▰</button>
+          <button class="control-trigger" type="button" data-panel="control-center" aria-expanded="false">控制中心</button>
+          <time id="menu-clock" class="menu-clock" datetime=""></time>
+        </div>
+      </header>
+
+      <aside class="stage-manager" aria-label="窗口组">
+        <p class="stage-caption">窗口组</p>
+        <button class="stage-card is-selected" type="button" data-window="workspace">
+          <span class="stage-preview preview-code"><i></i><i></i><i></i></span>
+          <span>工作台</span>
+        </button>
+        <button class="stage-card" type="button" data-window="notes">
+          <span class="stage-preview preview-notes"><i></i><i></i><i></i></span>
+          <span>项目笔记</span>
+        </button>
+        <button class="stage-card" type="button" data-window="media">
+          <span class="stage-preview preview-media"><i></i></span>
+          <span>媒体中心</span>
+        </button>
+      </aside>
+
+      <section id="workspace" class="desktop-window workspace-window is-active" aria-label="工作台窗口">
+        <header class="window-titlebar">
+          <div class="traffic-lights" aria-label="窗口控制">
+            <button class="traffic-light close" type="button" aria-label="关闭窗口" data-tooltip="关闭"></button>
+            <button class="traffic-light minimize" type="button" aria-label="最小化窗口" data-tooltip="最小化"></button>
+            <button class="traffic-light maximize" type="button" aria-label="缩放窗口" data-tooltip="缩放"></button>
+          </div>
+          <div class="window-title">Obsidian Desk</div>
+          <button class="window-more icon-button" type="button" aria-label="更多窗口操作" data-tooltip="更多">•••</button>
+        </header>
+        <div class="workspace-content">
+          <aside class="window-sidebar">
+            <p class="sidebar-label">收藏</p>
+            <button class="sidebar-item is-selected" type="button"><span>⌂</span>桌面</button>
+            <button class="sidebar-item" type="button"><span>▣</span>应用</button>
+            <button class="sidebar-item" type="button"><span>⌕</span>最近项目</button>
+            <p class="sidebar-label">工作区</p>
+            <button class="sidebar-item" type="button"><span>◈</span>AI 编程</button>
+            <button class="sidebar-item" type="button"><span>◌</span>专注模式</button>
+            <button class="sidebar-item" type="button"><span>▤</span>媒体收藏</button>
+          </aside>
+          <section class="workspace-main">
+            <div class="workspace-heading">
+              <div>
+                <p class="eyebrow">DESKTOP</p>
+                <h1>今天的工作台</h1>
+              </div>
+              <button id="focus-toggle" class="focus-button" type="button" aria-pressed="false"><span></span>专注</button>
+            </div>
+            <div class="workspace-grid">
+              <article class="primary-card project-card">
+                <div class="card-kicker"><span class="status-dot"></span> 当前项目</div>
+                <h2>Obsidian Glass Desktop</h2>
+                <p>Dock、窗口组、桌面组件与深空环境处于同一张工作台。</p>
+                <div class="project-progress"><span></span></div>
+                <div class="card-footer"><span>本地工作区</span><span>活跃</span></div>
+              </article>
+              <article class="primary-card schedule-card">
+                <div class="card-kicker">今日节奏</div>
+                <div class="schedule-time">14:30</div>
+                <p>专注编程块</p>
+                <div class="schedule-orbit"><span></span><span></span><span></span></div>
+              </article>
+              <article class="primary-card health-card">
+                <div class="card-kicker">系统状态</div>
+                <div class="health-number">良好</div>
+                <div class="health-bars"><span></span><span></span><span></span></div>
+                <p>动画与窗口预览采用低负载分层。</p>
+              </article>
+            </div>
+            <section class="recent-section">
+              <div class="section-heading">
+                <h2>最近打开</h2>
+                <button type="button" class="text-button">显示全部</button>
+              </div>
+              <div class="recent-list">
+                <button class="recent-item" type="button"><span class="recent-icon code">&lt;/&gt;</span><span><b>AI Particle Universe</b><small>开发项目</small></span><time>刚刚</time></button>
+                <button class="recent-item" type="button"><span class="recent-icon notes">≡</span><span><b>设计记录</b><small>项目笔记</small></span><time>18 分钟前</time></button>
+                <button class="recent-item" type="button"><span class="recent-icon media">▷</span><span><b>媒体中心</b><small>播放与字幕</small></span><time>昨天</time></button>
+              </div>
+            </section>
+          </section>
+        </div>
+      </section>
+
+      <section id="notes" class="desktop-window mini-window notes-window" aria-label="项目笔记窗口" hidden>
+        <header class="window-titlebar">
+          <div class="traffic-lights"><button class="traffic-light close" type="button" aria-label="关闭窗口"></button><button class="traffic-light minimize" type="button" aria-label="最小化窗口"></button><button class="traffic-light maximize" type="button" aria-label="缩放窗口"></button></div>
+          <div class="window-title">项目笔记</div>
+        </header>
+        <div class="note-sheet"><p class="eyebrow">IDEA</p><h2>保持中央留白</h2><p>左侧窗口组、底部 Dock 与右侧桌面组件形成安静的桌面秩序。</p><hr><p>所有视觉层均为独立、可关闭的用户空间模块。</p></div>
+      </section>
+
+      <section id="media" class="desktop-window mini-window media-window" aria-label="媒体中心窗口" hidden>
+        <header class="window-titlebar">
+          <div class="traffic-lights"><button class="traffic-light close" type="button" aria-label="关闭窗口"></button><button class="traffic-light minimize" type="button" aria-label="最小化窗口"></button><button class="traffic-light maximize" type="button" aria-label="缩放窗口"></button></div>
+          <div class="window-title">媒体中心</div>
+        </header>
+        <div class="media-sheet"><div class="album-glow"></div><p class="eyebrow">NOW PLAYING</p><h2>午夜工作流</h2><p>深色、克制、沉浸。</p><div class="media-track"><span></span></div><div class="media-controls"><button type="button" aria-label="上一首">|◁</button><button type="button" class="media-play" aria-label="播放或暂停">▷</button><button type="button" aria-label="下一首">▷|</button></div></div>
+      </section>
+
+      <section class="desktop-files" aria-label="桌面项目">
+        <button class="desktop-file" type="button"><span class="folder-shape sky"></span><span>项目</span></button>
+        <button class="desktop-file" type="button"><span class="folder-shape plum"></span><span>媒体</span></button>
+        <button class="desktop-file" type="button"><span class="folder-shape mint"></span><span>学习</span></button>
+      </section>
+
+      <section id="control-center" class="popover control-center" hidden aria-label="控制中心">
+        <div class="popover-heading"><span>控制中心</span><button class="icon-button" type="button" data-close-panels aria-label="关闭控制中心">×</button></div>
+        <div class="control-grid">
+          <button type="button" class="control-tile active"><span>⌁</span><b>Wi-Fi</b><small>已连接</small></button>
+          <button type="button" class="control-tile active"><span>◐</span><b>专注</b><small>未开启</small></button>
+          <button type="button" class="control-tile"><span>◒</span><b>显示</b><small>原彩</small></button>
+          <button type="button" class="control-tile"><span>♫</span><b>声音</b><small>68%</small></button>
+        </div>
+        <label class="control-slider"><span>亮度</span><input type="range" value="68" min="0" max="100"></label>
+      </section>
+
+      <section id="launcher" class="popover launcher" hidden aria-label="应用启动器">
+        <div class="popover-heading"><span>应用</span><button class="icon-button" type="button" data-close-panels aria-label="关闭应用启动器">×</button></div>
+        <div class="launcher-grid">
+          <button type="button"><i class="launch-icon files">▣</i><span>文件</span></button>
+          <button type="button"><i class="launch-icon browser">⌁</i><span>浏览器</span></button>
+          <button type="button"><i class="launch-icon code">&lt;/&gt;</i><span>代码</span></button>
+          <button type="button"><i class="launch-icon media">▷</i><span>音乐</span></button>
+          <button type="button"><i class="launch-icon chat">◎</i><span>聊天</span></button>
+          <button type="button"><i class="launch-icon settings">⚙</i><span>设置</span></button>
+        </div>
+      </section>
+
+      <section id="now-playing" class="popover now-playing" hidden aria-label="正在播放">
+        <div class="album-mini"></div><div><p>午夜工作流</p><small>环境音乐</small></div><button type="button" class="play-inline" aria-label="播放或暂停">▷</button>
+      </section>
+
+      <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+      <nav id="dock" class="dock" aria-label="Dock 应用">
+        <button class="dock-app finder" type="button" data-tooltip="文件" aria-label="文件"><span>▣</span></button>
+        <button class="dock-app browser" type="button" data-tooltip="浏览器" aria-label="浏览器"><span>⌁</span></button>
+        <button class="dock-app messages" type="button" data-tooltip="消息" aria-label="消息"><span>◉</span></button>
+        <button class="dock-app code" type="button" data-tooltip="代码" aria-label="代码"><span>&lt;/&gt;</span></button>
+        <button class="dock-app terminal" type="button" data-tooltip="终端" aria-label="终端"><span>_</span></button>
+        <span class="dock-divider" aria-hidden="true"></span>
+        <button class="dock-app music" type="button" data-tooltip="音乐" aria-label="音乐"><span>♫</span></button>
+        <button class="dock-app photos" type="button" data-tooltip="照片" aria-label="照片"><span>◌</span></button>
+        <button class="dock-app settings" type="button" data-tooltip="设置" aria-label="设置"><span>⚙</span></button>
+        <span class="dock-divider" aria-hidden="true"></span>
+        <button class="dock-app bin" type="button" data-tooltip="废纸篓" aria-label="废纸篓"><span>⌫</span></button>
+      </nav>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

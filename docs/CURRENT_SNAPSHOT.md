@@ -19,6 +19,7 @@ This package is a new, addressable branch of the earlier open-source package. Th
 - Topbar/media center helpers, camera/language controls, and X/GitHub/Claude shortcut helpers.
 - Dock visibility and media progress controllers.
 - Deep-space Lively wallpaper, twelve-constellation layer, meteors, fluid background, Animal Trail System source, and the current CSS/JavaScript bottom ambient-light module.
+- An independent static Mac Desktop Edition browser prototype. It is source-only and does not connect to live Windows desktop processes or state.
 - Current startup orchestration and separate, reversible current-user startup installer.
 
 The current public screenshots use privacy-safe crops from the active desktop. `04-dashboard.png` shows the actual independent colored animal-framed widgets, while `06-ambient.png` shows the real cyan/blue bottom light running behind the Dock. Raw desktop captures and their private values are not included.

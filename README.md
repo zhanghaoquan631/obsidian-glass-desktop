@@ -4,6 +4,12 @@
 
 ![Obsidian Glass Desktop 最新版本总览](assets/screenshots/01-overview.png)
 
+## 独立 Mac Desktop Edition
+
+仓库新增一个独立、可直接打开的 Mac 风格桌面原型：[`mac-desktop-edition/`](mac-desktop-edition/)。它参考顶部菜单栏、窗口组、交通灯窗口、控制中心和底部 Dock 的信息结构，但不复制 Apple 标志、macOS 代码或系统资源。它只在浏览器内运行，不读取或修改 Windows、MyDockFinder、Lively、Seelen、当前组件状态、个人文件或启动项。
+
+![Mac Desktop Edition 预览](mac-desktop-edition/assets/mac-desktop-edition-preview.png)
+
 ## 2026-08-21 最新版本
 
 这个版本重点不是单独换一张壁纸或套一层皮肤，而是把桌面、窗口切换、媒体、AI 工作流和环境动画组织成一套可以独立启动、逐项关闭、完整恢复的 Windows 11 桌面工作台。
@@ -128,6 +134,7 @@
 | Dock 媒体与显隐 | `src/components/ambient/` | 当前 Dock 显隐和媒体进度组件 |
 | 底部环境光 | `src/components/wallpaper/ambient-light/` | 当前蓝紫环境光、鼠标/音频响应、暂停与低功耗适配 |
 | 壁纸 | `src/components/wallpaper/` | 当前深空环境、星座、流星、动物轨迹和 Petdex 元数据 |
+| Mac Desktop Edition | `mac-desktop-edition/` | 独立浏览器原型、顶部菜单、窗口组、控制中心与 Dock 交互；不连接本机桌面运行时 |
 | 启动 | `src/current/` | 当前启动顺序的可移植版本及恢复脚本 |
 
 精确的文件来源、哈希和排除清单见 `docs/CURRENT_SNAPSHOT.md` 与 `docs/current-source-manifest.json`。

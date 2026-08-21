@@ -11,6 +11,7 @@ This table maps the **current** isolated public package to the active desktop wo
 | Dock media and visibility | `src/components/ambient/` | `DockVisibilityController.ps1`, `DockMediaProgress.cs`, install/restore helpers | Windows media session APIs |
 | Bottom ambient light | `src/components/wallpaper/ambient-light/` | `bottom-ambient-light.css`, `bottom-ambient-light.js`, `README.md` | Lively Wallpaper, CSS compositor |
 | Wallpaper | `src/components/wallpaper/` | `index.html`, `LivelyProperties.json`, `space-environment/`, `animal-trail/`, `ambient-light/` | Lively Wallpaper/WebGL |
+| Mac Desktop Edition | `mac-desktop-edition/` | `index.html`, `styles.css`, `app.js`, `README.md` | Any modern browser; no local desktop host or system integration |
 | Current startup | `src/current/`, root wrappers | `startup_optimized.ps1`, `start-current.ps1`, `install-current-startup.ps1` | Windows Task Scheduler, optional installed apps |
 | Generic startup kit | `src/` and `config/obsidian-glass.example.json` | `Install-StartupKit.ps1`, `Start-DesktopSession.ps1`, `Restore-StartupKit.ps1` | Windows Task Scheduler |
 

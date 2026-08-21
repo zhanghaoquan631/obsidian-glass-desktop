@@ -2,9 +2,9 @@
     "schemaVersion":  1,
     "package":  "Obsidian Glass Desktop",
     "snapshotDate":  "2026-08-21",
-    "generatedAt":  "2026-08-21T03:42:23.4040207Z",
-    "fileCount":  241,
-    "totalBytes":  39768841,
+    "generatedAt":  "2026-08-21T04:19:44.5882484Z",
+    "fileCount":  246,
+    "totalBytes":  39881482,
     "excluded":  [
                      "runtime state",
                      "logs",
@@ -27,8 +27,8 @@
                   },
                   {
                       "path":  "CHANGELOG.md",
-                      "bytes":  3147,
-                      "sha256":  "297f66c4453696d2eab5c53c88e14093c88759a2fede8ef2f58f657e8e6d45f9"
+                      "bytes":  3547,
+                      "sha256":  "9a71ac74cf427a7a413ca1cb86ea497a0efe792a638114a3f2eb81dd7de004a0"
                   },
                   {
                       "path":  "install-current-startup.ps1",
@@ -47,8 +47,8 @@
                   },
                   {
                       "path":  "README.md",
-                      "bytes":  17372,
-                      "sha256":  "9cedbf6dc54ed23b1b2af45f126ee5b902bf5e23f2adcfaa2a64ed09efd54cd5"
+                      "bytes":  18079,
+                      "sha256":  "dbae85a14441b977ae74a17406005fc14dc1e55936ae8bdfbc46c86417c33be7"
                   },
                   {
                       "path":  "restore-current-startup.ps1",
@@ -82,8 +82,8 @@
                   },
                   {
                       "path":  "test.ps1",
-                      "bytes":  4569,
-                      "sha256":  "f7629e933d74cc8e13725e117b620f2826d75e27b331a8dacfe483347cd4a2c4"
+                      "bytes":  5972,
+                      "sha256":  "2454255fdfcee2368ff20de5f5784c33e55aad3168461707386be1660499822d"
                   },
                   {
                       "path":  "assets/manifest.json",
@@ -162,8 +162,8 @@
                   },
                   {
                       "path":  "docs/CURRENT_SNAPSHOT.md",
-                      "bytes":  2937,
-                      "sha256":  "fceb3a37ed6819f1d364684399230f6f9672d2e7df2052b946693e9693a11b49"
+                      "bytes":  3083,
+                      "sha256":  "d60232dd0f7f6d2b24cc9a71a73bc4b40472157ca7755ba3b8e5aa1fe6bbfe21"
                   },
                   {
                       "path":  "docs/PUBLISH_CHECKLIST.md",
@@ -177,13 +177,38 @@
                   },
                   {
                       "path":  "docs/SOURCE_MAP.md",
-                      "bytes":  2146,
-                      "sha256":  "1817680eed6be7efad25ec0efd0cc9086b285213d8437ef29bcff22935ddab14"
+                      "bytes":  2313,
+                      "sha256":  "15209cb6c675d20fa8b700e001c73428f15eeddb4c773d4fe7806c094f32053a"
                   },
                   {
                       "path":  "docs/STARTUP_DESIGN.md",
                       "bytes":  1523,
                       "sha256":  "2106d733ece3b699410f0dc629f1877e1b2f28589886ae025eb7e64b8aae4a1a"
+                  },
+                  {
+                      "path":  "mac-desktop-edition/app.js",
+                      "bytes":  5442,
+                      "sha256":  "7ed2b1ea70b6cc486fc124ff970e6c3443efd610e2707bce27535c25cdf0a7d3"
+                  },
+                  {
+                      "path":  "mac-desktop-edition/index.html",
+                      "bytes":  12671,
+                      "sha256":  "763d7a522248b20c285d8979a465218274e5b6b391d123fcb70b4fa21ed3b3e3"
+                  },
+                  {
+                      "path":  "mac-desktop-edition/README.md",
+                      "bytes":  1257,
+                      "sha256":  "fb01b531f62afa0db828024fbaa4170b3f38c3b0fab999242feda13535575a60"
+                  },
+                  {
+                      "path":  "mac-desktop-edition/styles.css",
+                      "bytes":  19368,
+                      "sha256":  "a2087c8d996172ff7f9626f7ac00646d4bdb0ddcccc00ec34d3e70d12a453276"
+                  },
+                  {
+                      "path":  "mac-desktop-edition/assets/mac-desktop-edition-preview.png",
+                      "bytes":  71080,
+                      "sha256":  "c88da79f38df25cf1c399fba2b7d57aa329d86cf00448f73ea687218649878c7"
                   },
                   {
                       "path":  "src/Get-StartupStatus.ps1",

@@ -88,6 +88,21 @@ function Assert-AmbientLightPixels {
     }
 }
 
+function Assert-TextOmits {
+    param(
+        [string]$RelativePath,
+        [string[]]$ForbiddenText
+    )
+
+    $fullPath = Join-Path $packageRoot $RelativePath
+    $content = [IO.File]::ReadAllText($fullPath)
+    foreach ($marker in $ForbiddenText) {
+        if ($content.IndexOf($marker, [StringComparison]::OrdinalIgnoreCase) -ge 0) {
+            throw ('Forbidden local-control marker in ' + $RelativePath + ': ' + $marker)
+        }
+    }
+}
+
 & (Join-Path $packageRoot 'src\Test-StartupKit.ps1')
 if ($LASTEXITCODE -ne 0) {
     exit $LASTEXITCODE
@@ -133,4 +148,38 @@ Assert-ImageDimensions -RelativePath 'assets\screenshots\04-dashboard.png' -Expe
 Assert-ImageDimensions -RelativePath 'assets\screenshots\06-ambient.png' -ExpectedWidth 1600 -ExpectedHeight 693 -MinimumBytes 250000
 Assert-AmbientLightPixels -RelativePath 'assets\screenshots\06-ambient.png'
 
-Write-Host 'PASS: 公开包语法、JSON、环境光接入、当前截图、运行时排除项和基础隐私检查通过。' -ForegroundColor Green
+foreach ($macFile in @(
+    'mac-desktop-edition\index.html',
+    'mac-desktop-edition\styles.css',
+    'mac-desktop-edition\app.js',
+    'mac-desktop-edition\README.md',
+    'mac-desktop-edition\assets\mac-desktop-edition-preview.png'
+)) {
+    Assert-PackagePath -RelativePath $macFile
+}
+Assert-TextContains -RelativePath 'mac-desktop-edition\index.html' -RequiredText @(
+    'class="menu-bar"',
+    'class="stage-manager"',
+    'id="workspace"',
+    'id="control-center"',
+    'id="dock"'
+)
+Assert-TextContains -RelativePath 'mac-desktop-edition\app.js' -RequiredText @(
+    'function togglePanel',
+    'function selectWindow',
+    'dock.addEventListener("pointermove"',
+    'focus-mode'
+)
+Assert-TextOmits -RelativePath 'mac-desktop-edition\app.js' -ForbiddenText @(
+    'localStorage',
+    'sessionStorage',
+    'fetch(',
+    'XMLHttpRequest',
+    'powershell',
+    'registry',
+    'MyDockFinder',
+    'Lively',
+    'Seelen'
+)
+
+Write-Host 'PASS: 公开包语法、JSON、环境光接入、Mac Desktop Edition、当前截图、运行时排除项和基础隐私检查通过。' -ForegroundColor Green

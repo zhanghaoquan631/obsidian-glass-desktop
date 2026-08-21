@@ -1,5 +1,10 @@
 ﻿# Changelog
 
+## 0.3.0 - 2026-08-21
+
+- Added `mac-desktop-edition/`, a separately addressable browser-only Mac-style desktop prototype with a menu bar, Stage Manager-inspired window groups, glass windows, Dock magnification, control center, launcher, and focus mode.
+- Kept the prototype isolated from all live desktop tools, configuration, startup entries, wallpaper state, personal files, and Windows settings.
+
 ## 0.2.1 - 2026-08-21
 
 - Added the real bottom ambient-light implementation under `src/components/wallpaper/ambient-light/` and connected it to the current Lively wallpaper entry point, audio callback, pause state, property listener, and low-power settings.
