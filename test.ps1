@@ -182,4 +182,36 @@ Assert-TextOmits -RelativePath 'mac-desktop-edition\app.js' -ForbiddenText @(
     'Seelen'
 )
 
+foreach ($startMenuFile in @(
+    'src\components\start-menu\README.md',
+    'src\components\start-menu\apply-start-menu-theme.ps1',
+    'src\components\start-menu\restore-start-menu-theme.ps1',
+    'src\components\start-menu\verify-start-menu-theme.ps1',
+    'src\components\start-menu\assets\README.md'
+)) {
+    Assert-PackagePath -RelativePath $startMenuFile
+}
+Assert-TextContains -RelativePath 'src\components\start-menu\apply-start-menu-theme.ps1' -RequiredText @(
+    '[switch]$Apply',
+    'Windhawk',
+    'baseline-before-obsidian-crimson.reg',
+    'StartMenuExperienceHost'
+)
+Assert-TextContains -RelativePath 'src\components\start-menu\restore-start-menu-theme.ps1' -RequiredText @(
+    '[switch]$Apply',
+    'baseline-before-obsidian-crimson.reg',
+    'reg.exe import'
+)
+Assert-TextContains -RelativePath 'src\components\start-menu\verify-start-menu-theme.ps1' -RequiredText @(
+    'Windhawk Start Menu Styler',
+    'StartMenuExperienceHost',
+    'WindhawkBlur'
+)
+Assert-TextOmits -RelativePath 'src\components\start-menu\apply-start-menu-theme.ps1' -ForbiddenText @(
+    '19260484713',
+    'DemonSlayerStartMenu',
+    'wxid_',
+    'xwechat'
+)
+
 Write-Host 'PASS: 公开包语法、JSON、环境光接入、Mac Desktop Edition、当前截图、运行时排除项和基础隐私检查通过。' -ForegroundColor Green

@@ -17,6 +17,7 @@ This package is a new, addressable branch of the earlier open-source package. Th
 - Obsidian Glass Dock with fixed apps, running state, recent windows, preview helpers, and current portability adapters.
 - Left Stage rail with edge reveal and native/DWM preview sources.
 - Topbar/media center helpers, camera/language controls, and X/GitHub/Claude shortcut helpers.
+- Windows 11 Start Menu Styler source with an explicit-apply Obsidian Crimson glass theme, verification, and local per-user backup/restore flow.
 - Dock visibility and media progress controllers.
 - Deep-space Lively wallpaper, twelve-constellation layer, meteors, fluid background, Animal Trail System source, and the current CSS/JavaScript bottom ambient-light module.
 - An independent static Mac Desktop Edition browser prototype. It is source-only and does not connect to live Windows desktop processes or state.
@@ -27,6 +28,7 @@ The current public screenshots use privacy-safe crops from the active desktop. `
 ## Deliberate exclusions
 
 - No user profile paths, account identifiers, chat transcripts, browser data, WebView2 data, tokens, or credentials.
+- No current Start Menu registry export, local theme backup, desktop screenshot, or unverified character/background artwork.
 - No personal music, lyrics cache, subtitles, screenshots containing private windows, or desktop capture logs.
 - No `.exe`, `.dll`, `.pdb`, CUDA/Whisper model, portable Python, or other downloaded runtime binary.
 - No full Petdex sprite cache. The live cache is approximately 3 GB; only metadata and eight lightweight starter sets are staged.

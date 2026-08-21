@@ -8,6 +8,7 @@ This table maps the **current** isolated public package to the active desktop wo
 | Left rail | `src/components/sidebar/` | `ObsidianSidebar.ps1`, `SeelenLivePreview.cs`, `start.ps1`, preview helpers | Optional Seelen UI, native Win32 |
 | Dashboard | `src/components/dashboard/` | `MacWidgetDashboard.ps1`, `Dashboard.xaml`, `SystemControlOverlay.ps1`, speech/media workers | WPF/.NET Framework, optional FFmpeg and isolated speech runtime |
 | Topbar | `src/components/topbar/` | `DesktopTopbar.cs`, `DesktopMediaCenter.ps1`, language/camera/X/GitHub helpers | Optional Seelen UI, MyDockFinder, FFmpeg |
+| Windows Start Menu | `src/components/start-menu/` | `apply-start-menu-theme.ps1`, `restore-start-menu-theme.ps1`, `verify-start-menu-theme.ps1` | Optional Windhawk Windows 11 Start Menu Styler; explicit admin apply only |
 | Dock media and visibility | `src/components/ambient/` | `DockVisibilityController.ps1`, `DockMediaProgress.cs`, install/restore helpers | Windows media session APIs |
 | Bottom ambient light | `src/components/wallpaper/ambient-light/` | `bottom-ambient-light.css`, `bottom-ambient-light.js`, `README.md` | Lively Wallpaper, CSS compositor |
 | Wallpaper | `src/components/wallpaper/` | `index.html`, `LivelyProperties.json`, `space-environment/`, `animal-trail/`, `ambient-light/` | Lively Wallpaper/WebGL |

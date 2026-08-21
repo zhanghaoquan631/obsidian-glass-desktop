@@ -39,6 +39,12 @@ src/components/wallpaper/animal-trail/assets/*
 !src/components/wallpaper/animal-trail/assets/silver-shorthair/*
 src/components/dashboard/mode-deck-reference.jpg
 
+# Optional local Windows Start Menu artwork
+src/components/start-menu/assets/*.local.png
+src/components/start-menu/assets/*.local.jpg
+src/components/start-menu/assets/*.local.jpeg
+src/components/start-menu/assets/*.local.bmp
+
 # Never publish locally compiled or downloaded runtime binaries
 *.exe
 *.dll

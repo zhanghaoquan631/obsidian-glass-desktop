@@ -108,6 +108,13 @@
 - DWM 预览不持续截图，频谱只在检测到播放时提高刷新率，组件隐藏时暂停频谱重绘；全屏期间 Dock 和边栏都降低扫描频率。
 - `restore.ps1`、`restore-current-startup.ps1` 以及各组件自己的恢复脚本只撤销本项目创建的入口和视觉层，不卸载软件、不删除项目数据或个人文件。
 
+### 9. Windows 11 开始菜单玻璃主题
+
+- `src/components/start-menu/` 提供独立的 Windhawk Start Menu Styler 主题：黑曜石底色、深红主光、紫晶与冰蓝细边、搜索框与应用悬停毛玻璃。
+- 所有应用、推荐项目、搜索、账户和电源菜单仍由 Windows 实时提供；该组件不伪造应用内容，也不替换 Explorer。
+- 默认只预览；必须显式使用 `-Apply` 才会改写 Windhawk 的模块设置。首次应用会将原有设置备份到当前用户的 `%LOCALAPPDATA%`，恢复同样需要显式 `-Apply`。
+- 公开包不包含现成本机图片、截图、注册表导出或任何动漫人物素材；可自行指定拥有使用权的本地背景图片。
+
 ## 目标
 
 在普通 Windows 11 上叠加一层可退出、可恢复的桌面体验：
@@ -131,6 +138,7 @@
 | Dock | `src/components/dock/` | 当前三区 Dock、窗口跟踪、微信实时预览与运行黑点修复源码 |
 | 左侧栏 | `src/components/sidebar/` | 当前 Stage Manager 胶囊、DWM 缩略图、Seelen 横向预览 |
 | 顶栏 | `src/components/topbar/` | 当前媒体中心、录像时长、语言切换、X/GitHub/Claude 操作脚本 |
+| 开始菜单 | `src/components/start-menu/` | Windows 11 Start Menu Styler 的黑曜石血红玻璃主题、只读验证与可恢复应用脚本 |
 | Dock 媒体与显隐 | `src/components/ambient/` | 当前 Dock 显隐和媒体进度组件 |
 | 底部环境光 | `src/components/wallpaper/ambient-light/` | 当前蓝紫环境光、鼠标/音频响应、暂停与低功耗适配 |
 | 壁纸 | `src/components/wallpaper/` | 当前深空环境、星座、流星、动物轨迹和 Petdex 元数据 |

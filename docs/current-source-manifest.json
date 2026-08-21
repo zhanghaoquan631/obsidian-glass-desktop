@@ -2,9 +2,9 @@
     "schemaVersion":  1,
     "package":  "Obsidian Glass Desktop",
     "snapshotDate":  "2026-08-21",
-    "generatedAt":  "2026-08-21T04:19:44.5882484Z",
-    "fileCount":  246,
-    "totalBytes":  39881482,
+    "generatedAt":  "2026-08-21T14:33:32.2722783Z",
+    "fileCount":  251,
+    "totalBytes":  39902188,
     "excluded":  [
                      "runtime state",
                      "logs",
@@ -17,8 +17,8 @@
     "files":  [
                   {
                       "path":  ".gitignore",
-                      "bytes":  1881,
-                      "sha256":  "879026401d9dd671adf1a85fa40f402056125f41148a0b6c58b18ef46ca644b9"
+                      "bytes":  2107,
+                      "sha256":  "5c4e72386e49f0984e98f743e903d011be6acdd7fa877e754c8035ad4536622e"
                   },
                   {
                       "path":  "capture-screenshots.ps1",
@@ -27,8 +27,8 @@
                   },
                   {
                       "path":  "CHANGELOG.md",
-                      "bytes":  3547,
-                      "sha256":  "9a71ac74cf427a7a413ca1cb86ea497a0efe792a638114a3f2eb81dd7de004a0"
+                      "bytes":  3968,
+                      "sha256":  "6f820ffacdf1073b5723e12af4f9a1b458fe752f5cddddae66885101c0e48036"
                   },
                   {
                       "path":  "install-current-startup.ps1",
@@ -47,8 +47,8 @@
                   },
                   {
                       "path":  "README.md",
-                      "bytes":  18079,
-                      "sha256":  "dbae85a14441b977ae74a17406005fc14dc1e55936ae8bdfbc46c86417c33be7"
+                      "bytes":  18949,
+                      "sha256":  "41d2614d34f36b5418ea16e6c428d781f10f6da177a9a1277a7e95388925fe36"
                   },
                   {
                       "path":  "restore-current-startup.ps1",
@@ -82,8 +82,8 @@
                   },
                   {
                       "path":  "test.ps1",
-                      "bytes":  5972,
-                      "sha256":  "2454255fdfcee2368ff20de5f5784c33e55aad3168461707386be1660499822d"
+                      "bytes":  7127,
+                      "sha256":  "b2a491110f71850633dfe2122307366d031ae19519ca20c45475767408d57d4d"
                   },
                   {
                       "path":  "assets/manifest.json",
@@ -162,8 +162,8 @@
                   },
                   {
                       "path":  "docs/CURRENT_SNAPSHOT.md",
-                      "bytes":  3083,
-                      "sha256":  "d60232dd0f7f6d2b24cc9a71a73bc4b40472157ca7755ba3b8e5aa1fe6bbfe21"
+                      "bytes":  3353,
+                      "sha256":  "0a75a7e5f698c5cf4573824961ba6dbeb194700ef192d5cbd583daa18a79ed31"
                   },
                   {
                       "path":  "docs/PUBLISH_CHECKLIST.md",
@@ -177,8 +177,8 @@
                   },
                   {
                       "path":  "docs/SOURCE_MAP.md",
-                      "bytes":  2313,
-                      "sha256":  "15209cb6c675d20fa8b700e001c73428f15eeddb4c773d4fe7806c094f32053a"
+                      "bytes":  2537,
+                      "sha256":  "a8ceab0c5f843ad64cb2bbd0f98c559594cb5100abed749411bc5f656f5d3836"
                   },
                   {
                       "path":  "docs/STARTUP_DESIGN.md",
@@ -829,6 +829,31 @@
                       "path":  "src/components/sidebar/assets/Visual Studio Code.ico",
                       "bytes":  7481,
                       "sha256":  "03f6cac5da233396bd2f07751d3b13791188cdaf972a3fc7d890c9007a5cd02d"
+                  },
+                  {
+                      "path":  "src/components/start-menu/apply-start-menu-theme.ps1",
+                      "bytes":  9776,
+                      "sha256":  "dcd36a1d3354f1dce4eb79faf44cc314743ad23024ae8a560c166ca026f61fa8"
+                  },
+                  {
+                      "path":  "src/components/start-menu/README.md",
+                      "bytes":  2973,
+                      "sha256":  "3b83f863c662d4fbd511618b57a8aa125c05eab584afe833f75127c97b9a3e89"
+                  },
+                  {
+                      "path":  "src/components/start-menu/restore-start-menu-theme.ps1",
+                      "bytes":  1838,
+                      "sha256":  "9526f4fb41ea4f2a86c9f75e086e41d354f355e343f00a72bcdbfe2c0f7aabfc"
+                  },
+                  {
+                      "path":  "src/components/start-menu/verify-start-menu-theme.ps1",
+                      "bytes":  2571,
+                      "sha256":  "ae0f6451a902a97f3ae61873458f7edf354b01f0e6d003efb57aa329b6569ec5"
+                  },
+                  {
+                      "path":  "src/components/start-menu/assets/README.md",
+                      "bytes":  382,
+                      "sha256":  "9457b3df040f4c0c3398ae5eb57be1a7dd25dc63f8e109e282f7cce990fd44a8"
                   },
                   {
                       "path":  "src/components/topbar/apply_x_github_art_icons.ps1",

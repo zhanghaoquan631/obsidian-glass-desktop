@@ -1,5 +1,10 @@
 ﻿# Changelog
 
+## 0.3.1 - 2026-08-21
+
+- Added `src/components/start-menu/`, an independently documented Windows 11 Start Menu Styler theme with Obsidian Crimson Glass styling, preview-first apply behavior, verification, and local backup/restore.
+- Deliberately excluded the live machine's registry exports, backups, logs, screenshots, and unverified character artwork; users can opt into their own local image with `-BackgroundImage`.
+
 ## 0.3.0 - 2026-08-21
 
 - Added `mac-desktop-edition/`, a separately addressable browser-only Mac-style desktop prototype with a menu bar, Stage Manager-inspired window groups, glass windows, Dock magnification, control center, launcher, and focus mode.
